@@ -103,7 +103,7 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
   float current = (float) ((int16_t) seplos_get_16bit(offset)) * 0.01f;
   this->publish_state_(this->current_sensor_, current);
 
-  //   56     0x14 0xA0      Total battery voltage            5280 * 0.01f = 52.80          V
+  //   56     0x14 0xA0      Total battery voltage            52800 * 0.001f = 52.800       V
   float total_voltage = (float) seplos_get_16bit(offset + 2) * 0.001f;
   this->publish_state_(this->total_voltage_sensor_, total_voltage);
 
