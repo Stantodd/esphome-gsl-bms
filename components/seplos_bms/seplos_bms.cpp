@@ -203,10 +203,10 @@ void SeplosBms::dump_config() {
   LOG_SENSOR("", "Charging cycles", this->charging_cycles_sensor_);
   LOG_SENSOR("", "State of health", this->state_of_health_sensor_);
   LOG_SENSOR("", "Port Voltage", this->port_voltage_sensor_);
-  LOG_SENSOR("", "unknown1", this->unknown_1_sensor_);
-  LOG_SENSOR("", "unknown2", this->unknown_2_sensor_);
-  LOG_SENSOR("", "unknown3", this->unknown_3_sensor_);
-  LOG_SENSOR("", "unknown4", this->unknown_4_sensor_);
+  LOG_SENSOR("", "unknown 1", this->unknown_1_sensor_);
+  LOG_SENSOR("", "unknown 2", this->unknown_2_sensor_);
+  LOG_SENSOR("", "unknown 3", this->unknown_3_sensor_);
+  LOG_SENSOR("", "unknown 4", this->unknown_4_sensor_);
 }
 
 float SeplosBms::get_setup_priority() const {
