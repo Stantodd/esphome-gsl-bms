@@ -119,8 +119,7 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
   //   61     0x42 0x68      Battery capacity                 17000 * 0.01f = 170.00        Ah
   this->publish_state_(this->battery_capacity_sensor_, (float) seplos_get_16bit(offset + 7) * 0.01f);
 
-  //   63     0x03 0x13      Stage of charge                  787 * 0.1f = 78.7             %
-  //  this->publish_state_(this->state_of_charge_sensor_, (float) seplos_get_16bit(offset + 9) * 0.1f);
+  //   63     0x00 0x84      Number of cycles                 132
   this->publish_state_(this->charging_cycles_sensor_, (float) seplos_get_16bit(offset + 9));
 
 
