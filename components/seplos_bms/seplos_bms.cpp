@@ -209,9 +209,6 @@ void SeplosBms::dump_config() {
   LOG_SENSOR("", "unknown3", this->unknown_3_sensor_);
   LOG_SENSOR("", "unknown4", this->unknown_4_sensor_);
 }
-}
-}
-}
 
 float SeplosBms::get_setup_priority() const {
   // After UART bus
