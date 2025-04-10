@@ -159,7 +159,6 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
 
   //   79     0x00 0x00      Reserved
   this->publish_state_(this->unknown_4_sensor_, (float) seplos_get_16bit(offset + 25) * 0.01f);
-
 }
 
 void SeplosBms::dump_config() {
