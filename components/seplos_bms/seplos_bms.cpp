@@ -124,10 +124,6 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
   //   67     0x00 0x46      Number of cycles                 70
   this->publish_state_(this->charging_cycles_sensor_, (float) seplos_get_16bit(offset + 13));
 
-  if (data.size() < offset + 15 + 2) {
-    return;
-  }
-
   //   65     0x46 0x50      Rated capacity                   18000 * 0.01f = 180.00        Ah
   this->publish_state_(this->rated_capacity_sensor_, (float) seplos_get_16bit(offset + 11) * 0.01f);
 
