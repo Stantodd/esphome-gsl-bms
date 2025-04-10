@@ -99,6 +99,11 @@ class SeplosBms : public PollingComponent, public seplos_modbus::SeplosModbusDev
   sensor::Sensor *charging_cycles_sensor_;
   sensor::Sensor *state_of_health_sensor_;
   sensor::Sensor *port_voltage_sensor_;
+  sensor::Sensor *unknown_1_sensor_;
+  sensor::Sensor *unknown_2_sensor_;
+  sensor::Sensor *unknown_3_sensor_;
+  sensor::Sensor *unknown_4_sensor_;
+
 
   text_sensor::TextSensor *errors_text_sensor_;
 
