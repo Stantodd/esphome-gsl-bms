@@ -45,6 +45,12 @@ CONF_RATED_CAPACITY = "rated_capacity"
 CONF_CHARGING_CYCLES = "charging_cycles"
 CONF_STATE_OF_HEALTH = "state_of_health"
 CONF_PORT_VOLTAGE = "port_voltage"
+CONF_UNKNOWN_1 = "unknown_1"
+CONF_UNKNOWN_2 = "unknown_2"
+CONF_UNKNOWN_3 = "unknown_3"
+CONF_UNKNOWN_4 = "unknown_4"
+
+
 
 CONF_CELL_VOLTAGE_1 = "cell_voltage_1"
 CONF_CELL_VOLTAGE_2 = "cell_voltage_2"
@@ -129,6 +135,10 @@ SENSORS = [
     CONF_CHARGING_CYCLES,
     CONF_STATE_OF_HEALTH,
     CONF_PORT_VOLTAGE,
+    CONF_UNKNOWN_1,
+    CONF_UNKNOWN_2,
+    CONF_UNKNOWN_3,
+    CONF_UNKNOWN_4,
 ]
 
 # pylint: disable=too-many-function-args
