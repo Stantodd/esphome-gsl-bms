@@ -141,8 +141,8 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
   //   69     0x03 0xE8      State of health                  1000 * 0.1f = 100.0           %
   this->publish_state_(this->state_of_health_sensor_, (float) seplos_get_16bit(offset + 15) * 0.1f);
 
-  if (data.size() < offset + 17 + 2) {
-    return;
+  // if (data.size() < offset + 17 + 2) {
+  //  return;
   }
 
   //   71     0x14 0x9F      Port voltage                     5279 * 0.01f = 52.79          V
