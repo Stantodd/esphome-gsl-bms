@@ -68,6 +68,8 @@ class SeplosBms : public PollingComponent, public seplos_modbus::SeplosModbusDev
   }
   void set_port_voltage_sensor(sensor::Sensor *port_voltage_sensor) { port_voltage_sensor_ = port_voltage_sensor; }
 
+  void unknown_1_sensor(sensor::Sensor *unknown_1_sensor) { unknown_1_sensor_ = unknown_1_sensor; }
+
   void set_errors_text_sensor(text_sensor::TextSensor *errors_text_sensor) { errors_text_sensor_ = errors_text_sensor; }
 
   void set_override_cell_count(uint8_t override_cell_count) { this->override_cell_count_ = override_cell_count; }
