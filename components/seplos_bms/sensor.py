@@ -131,10 +131,6 @@ SENSORS = [
     CONF_CHARGING_CYCLES,
     CONF_STATE_OF_HEALTH,
     CONF_PORT_VOLTAGE,
-    CONF_UNKNOWN_1,
-    CONF_UNKNOWN_2,
-    CONF_UNKNOWN_3,
-    CONF_UNKNOWN_4,
 ]
 
 # pylint: disable=too-many-function-args
