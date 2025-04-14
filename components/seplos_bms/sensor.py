@@ -432,7 +432,6 @@ CONFIG_SCHEMA = cv.Schema(
             state_class=STATE_CLASS_MEASUREMENT,
         ),
     }
-)
 
 
 async def to_code(config):
