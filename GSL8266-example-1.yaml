@@ -1,0 +1,50 @@
+type: custom:stack-in-card
+keep:
+  margin: false
+  box_shadow: false
+  background: false
+cards:
+  - type: grid
+    square: false
+    columns: 2
+    cards:
+      - type: markdown
+        content: >-
+          <center><b><font color=#41CD52 size=6>{{
+          states('sensor.gslbms_total_voltage') }} V</font></b><br> Battery
+          Power :&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_power') }} W</font><br>Battery Capacity
+          :&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_rated_capacity') }} Ah</font><br> Act Battery
+          Capacity:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_battery_capacity') }} Ah</font><br> Remain
+          Capacity:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_residual_capacity') }} Ah</font><br> Avg Cell
+          Volt:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_average_cell_voltage') }} V</font><br> Delta
+          Cell Vol.:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_delta_cell_voltage') }} V</font>
+      - type: markdown
+        content: >-
+          <center><b><font color=#41CD52 size=6>{{
+          states('sensor.gslbms_current') }} A</font></b><br>
+
+          Remain Battery:&nbsp;&nbsp;<font color=#41CD52>{{
+          ((states('sensor.gslbms_residual_capacity') | int ) /
+          (states('sensor.gslbms_battery_capacity') | int )  * 100) |int }}
+          %</font><br> 
+
+          Cycle Count:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_charging_cycles') }}</font><br>  ENV
+          Temp:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_environment_temperature') }} °C</font><br> MOS
+          Temp:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_mosfet_temperature') }} °C</font><br> Battery
+          T1:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_temperature_1') }} °C</font><br> Battery
+          T2:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_temperature_2') }} °C</font><br> Battery
+          T3:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_temperature_3') }} °C</font><br> Battery
+          T4:&nbsp;&nbsp;<font color=#41CD52>{{
+          states('sensor.gslbms_temperature_4') }} °C</font>
