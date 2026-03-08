@@ -145,7 +145,7 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
   //  return;
   //  }
 
-  //   71     0x14 0x9F      E1B3 Port voltage                     5279 * 0.01f = 52.79          V
+  //   71     0x14 0x9F      Checksum ?                     5279 * 0.01f = 52.79          V
   this->publish_state_(this->port_voltage_sensor_, (float) seplos_get_16bit(offset + 17) * 0.01f);
 }
 
