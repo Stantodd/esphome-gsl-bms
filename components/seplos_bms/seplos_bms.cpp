@@ -145,20 +145,8 @@ void SeplosBms::on_telemetry_data_(const std::vector<uint8_t> &data) {
   //  return;
   //  }
 
-  //   71     0x14 0x9F      Port voltage                     5279 * 0.01f = 52.79          V
+  //   71     0x14 0x9F      E1B3 Port voltage                     5279 * 0.01f = 52.79          V
   this->publish_state_(this->port_voltage_sensor_, (float) seplos_get_16bit(offset + 17) * 0.01f);
-
-  //   73     0x00 0x00      Reserved
-  //   this->publish_state_(this->unknown_1_sensor_, (float) seplos_get_16bit(offset + 19) * 0.01f);
-
-  //   75     0x00 0x00      Reserved
-  //   this->publish_state_(this->unknown_2_sensor_, (float) seplos_get_16bit(offset + 21) * 0.01f);
-
-  //   77     0x00 0x00      Reserved
-  //   this->publish_state_(this->unknown_3_sensor_, (float) seplos_get_16bit(offset + 23) * 0.01f);
-
-  //   79     0x00 0x00      Reserved
-  //   this->publish_state_(this->unknown_4_sensor_, (float) seplos_get_16bit(offset + 25) * 0.01f);
 }
 
 void SeplosBms::dump_config() {
